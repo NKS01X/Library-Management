@@ -6,8 +6,45 @@
     <title>Library-Management</title>
 </head>
 <body>
-    <div>
-        <h1>Library-Management</h1>
+    <!-- Header part div-->
+    <div id="First">
+        <button id="Home">Home</button>
+
+        <form action="/search" method="GET">
+             <input type="text" name="query" placeholder="Search..."> 
+             <button type="submit">Search</button> 
+        </form>
+        <button id="Register">Register</button>
+        <button id="Login">Login</button>
+        <button id="Admin">Admin</button>
+    </div>
+    <hr>
+    <!-- 
+    WELCOME DIV
+    -->
+    <div id="second">
+        <h1>WELCOME TO LIBRARY MANAGEMENT SYSTEM</h1>
+        <h3>This is GOlang based Library-Management system</h3>
+        <br>
+        <hr>
+        <h1>ALL BOOKS</h1>
+        <table border="1">
+             <thead> 
+                <tr>
+                     <th>#</th>
+                    <th>Book Name</th>
+                    <th>Details</th> 
+                </tr>
+            </thead> 
+            <tbody>
+                 <!-- Rows will be added here -->
+             </tbody>
+        </table>
+        <br>
+        <hr>
+        <p>&copy;Nikhil Kumar Singh</p>
+
+        
     </div>
     
 </body>

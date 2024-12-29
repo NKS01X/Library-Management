@@ -6,20 +6,29 @@ import (
 	"net/http"
 	"text/template"
 
+	//"Library-Management/backend/routeslist"
+
 	"github.com/gorilla/mux"
+	"github.com/nks01x/Library-Management/routeslist"
 )
 
 func main() {
 	// creating server
 	r := mux.NewRouter()
 
-	//handler function
-	r.HandleFunc("/", serveHome)
+	//handler functions
+	r.HandleFunc("/", serveHome).Methods("GET")
+	//signup page
+	r.HandleFunc("/signup", routeslist.Signup)
+	//signin page
+	r.HandleFunc("/signin", routeslist.Signin)
+
 	//server
-	log.Fatal(http.ListenAndServe(":8000", r))
 	fmt.Println("Server started at http://localhost:8000")
+	log.Fatal(http.ListenAndServe(":8000", r))
+
 }
-func nilCheckError(err error) {
+func NilCheckError(err error) {
 	//checking the error
 	if err != nil {
 		fmt.Println("Error occured in :\n", err)
@@ -33,9 +42,9 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 	//Library-Management/backend/
 	templates, err := template.ParseFiles("templates/home.html")
 	//templates = name of the parsed file
-	nilCheckError(err)
+	NilCheckError(err)
 	//Executing template
 	err = templates.Execute(w, nil)
-	nilCheckError(err)
+	NilCheckError(err)
 
 }
