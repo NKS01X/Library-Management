@@ -15,7 +15,8 @@ import (
 func main() {
 	// creating server
 	r := mux.NewRouter()
-
+	//used to serve static files such as ss files and all
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./backend/templates"))))
 	//handler functions
 	r.HandleFunc("/", serveHome).Methods("GET")
 	//signup page

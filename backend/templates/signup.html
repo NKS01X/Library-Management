@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>signup page</h1>
+    <div id="dabba">
+        <form>
+            <div class="container">
+                <h1><u>SIGNUP PAGE</u></h1>
+                <p><b><em><u>Fill in this form to create an account:</u></em></b></p>
+                <label for="fname"><b>First Name:</b></label>
+                <input type="text" placeholder="Enter First name" name="fname" id="fname" required>
+                <br><br>
+                <label for="lname"><b>Last Name:</b></label>
+                <input type="text" placeholder="Enter Last name" name="lname" id="lname" required>
+                <br><br>
+                <p><b>Enter your Gender:</b></p>
+                <input type="radio" name="Fav" id="male">
+                <label for="male">Male</label><br>
+                <input type="radio" name="Fav" id="female">
+                <label for="female">Female</label>
+                <br><br>
+                <label for="psw"><b>Password:</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <br><br>
+                <label for="psw-repeat"><b>Repeat Password:</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <br><br>
+                <label for="email"><b>Email:</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                <br><br>
+                <label>
+                    <input type="checkbox" unchecked="unchecked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <div class="clearfix">
+                    <button type="submit" id="submit" class="signup" name="signup"><b>sign Up</b></button>
+                    <button type="button" class="sign in" name="sign in"><b>sign in</b></button>
+                    <br><br>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="response.js"></script>
 </body>
 </html>
